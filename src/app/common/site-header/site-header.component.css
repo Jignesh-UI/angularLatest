@@ -1,29 +1,6 @@
-.headerButtonControl {
-    margin-right: 0px;
-    padding: 4px 0 5px 0;
-}
-
-.headerButtonControl a {
-    color: #fff;
-}
-
-.headerButtonControl a:last-child {
-    padding-right: 5px;
-}
-
-.headerButtonControl a+a::before {
-    content: "|";
-    color: #333;
-    padding: 0 3px;
-}
-
-.lbl-welcomeMessage {
-    font-size: 12px; 
-    padding: 0 0 5px 0;
-    color: #fff;
-}
-
-.headerButtonControl a {
-    font-size: 12px;
-
-}
+.headerButtonControl{ margin-right:0px; padding:4px 0 5px 0;}
+.headerButtonControl a{ color: #fff;}
+.headerButtonControl a:last-child{ padding-right:5px; }
+.headerButtonControl a+a::before{content: "|"; color: #333; padding: 0 3px;}
+.lbl-welcomeMessage{font-size:12px; padding:0 0 5px 0; color: #fff; } 
+.headerButtonControl a {font-size: 12px;}
