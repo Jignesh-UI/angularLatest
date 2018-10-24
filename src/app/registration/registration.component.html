@@ -1,0 +1,300 @@
+<div class="wrapper">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <h1 class="pageTitle">
+      Register Yourself
+    </h1>
+
+<form class="form-horizontal" id="employeeForm" [formGroup]="employeeForm" (ngSubmit)="submitForm()">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Create Employee</h3>
+    </div>
+
+    <div class="panel-body">
+      <div class="form-group">
+        <label for="firstName" [ngClass]="{'has-error' : formErrors.firstName }" class="col-sm-2 control-label">First Name:</label>
+        <div class="col-sm-4" [ngClass]="{'has-error' : formErrors.firstName }">
+          <input type="text" id="firstName" formControlName="firstName" placeholder="First Name" class="form-control" (blur)="logValidationErrors()">
+        </div>
+        <label for="lastName" class="col-sm-2 control-label" [ngClass]="{'has-error' : formErrors.lastName }">Last Name:</label>
+        <div class="col-sm-4" [ngClass]="{'has-error' : formErrors.lastName }" >
+          <input type="text" id="lastName" formControlName="lastName" class="form-control" placeholder="Last Name" (blur)="logValidationErrors()">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" [ngClass]="{'has-error' : formErrors.gender }">Gender:</label>
+        <div class="col-sm-4" [ngClass]="{'has-error' : formErrors.gender }">
+            <label for="maleRadio" class="radio-inline">
+                <input type="radio" id="maleRadio" value="Male" formControlName="gender"> Male
+            </label>
+            <label for="femaleRadio" class="radio-inline">
+                <input type="radio" id="femaleRadio" value="Female" formControlName="gender"> Female
+            </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <p class="alert alert-info ">Contact Preferences</p>
+        <label class="col-sm-2 control-label">Proficience</label>
+          <div class="col-md-8">
+            <label for="radBeginner" class="radio-inline">
+                <input type="radio" id="radEmail" value="email" formControlName="contactPreference">Email
+            </label>
+            <label for="radBeginner" class="radio-inline">
+                <input type="radio" id="radphone" value="mobileNo" formControlName="contactPreference">Mobile
+            </label>
+          </div>
+        </div>
+
+      <div class="form-group" >
+          <label for="email" class="col-sm-2 control-label" [ngClass]="{'has-error' : formErrors.email }">Email:</label>
+          <div class="col-sm-4" [ngClass]="{'has-error' : formErrors.email }">
+            <input type="text" id="email" formControlName="email" class="form-control" placeholder="Email" >
+            <label class="control-label email" *ngIf="formErrors.email"  [ngClass]="{'has-error': formErrors.email } "> {{formErrors.email}} </label>
+          </div>  
+          <label for="mobileNo" class="col-sm-2 control-label" [ngClass]="{'has-error' : formErrors.mobileNo }">Mobile:</label>
+          <div class="col-sm-4" [ngClass]="{'has-error' : formErrors.mobileNo }">
+            <input type="text" id="mobileNo" formControlName="mobileNo" class="form-control" placeholder="Mobile Number">
+          </div>
+      </div>
+
+      <div formGroupName="address">
+        <div class="form-group">
+          <p class="alert alert-info ">Location Details</p>
+          <label for="streetAddress" class="col-sm-2 control-label" [ngClass]="{'has-error' : formErrors.streetAddress }">Street Address:</label>
+          <div class="col-sm-4" [ngClass]="{'has-error' : formErrors.streetAddress }">
+            <input type="text" id="streetAddress" formControlName="streetAddress" class="form-control" placeholder="Street Address">
+          </div>
+          <label for="city" class="col-sm-2 control-label" [ngClass]="{'has-error' : formErrors.city }">City:</label>
+          <div class="col-sm-4" [ngClass]="{'has-error' : formErrors.city }">
+            <input type="text" id="city" formControlName="city" class="form-control" placeholder="City">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="state" class="col-sm-2 control-label" [ngClass]="{'has-error' : formErrors.state }">State:</label>
+          <div class="col-sm-4" [ngClass]="{'has-error' : formErrors.state }">
+            <input type="text" id="state" formControlName="state" class="form-control" placeholder="State">
+          </div>
+          <label for="zipcode" class="col-sm-2 control-label" [ngClass]="{'has-error' : formErrors.zipcode }">Zip Code:</label>
+          <div class="col-sm-4" [ngClass]="{'has-error' : formErrors.zipcode }">
+            <input type="text" id="zipcode" formControlName="zipcode" class="form-control" placeholder="Zip Code">
+            <label class="control-label email" *ngIf="formErrors.zipcode"  [ngClass]="{'has-error': formErrors.zipcode } "> {{formErrors.zipcode}} </label>
+          </div>
+        </div>
+      </div>
+
+      <div formGroupName="skills">
+        <div class="form-group">
+            <p class="alert alert-info ">SKill Related Details</p>
+            <label for="skillName" class="col-sm-2 control-label" [ngClass]="{'has-error' : formErrors.skillName }">Skills: </label>
+            <div class="col-sm-4" [ngClass]="{'has-error' : formErrors.skillName }">
+              <input type="text" id="skillName" placeholder="Skill" formControlName="skillName" class="form-control">
+            </div>
+            <label for="skillName" class="col-sm-2 control-label">Experience: </label>
+            <div class="col-sm-4">
+              <input type="text" id="expInYears" placeholder="Experience in Years" formControlName="experienceInYears" class="form-control">
+            </div>
+        </div>
+          <div class="form-group" [ngClass]="{'has-error' : formErrors.proficiency }">
+            <label class="col-sm-2 control-label">Proficience</label>
+            <div class="col-md-8">
+              <label for="radBeginner" class="radio-inline">
+                  <input type="radio" id="radBeginner" value="Beginner" formControlName="proficiency">
+                  Beginner
+              </label>
+              <label for="radBeginner" class="radio-inline">
+                  <input type="radio" id="radInter" value="Intermediate" formControlName="proficiency">
+                  Intermediate
+              </label>
+              <label for="radBeginner" class="radio-inline">
+                  <input type="radio" id="radAdvanced" value="Advanced" formControlName="proficiency">
+                  Advanced
+              </label>
+            </div>
+          </div>
+          <div class="col-md-12" *ngIf="!formValidationStatus" >
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Validation Summary
+              </div>
+              <div class="panel-body">  
+                <ul class="list-group">
+                  <li class="list-group-item" *ngIf="formErrors.firstName" > {{ formErrors }} </li>
+                </ul>
+              </div>              
+            </div>
+          </div>
+      </div>
+
+    </div>
+    <div class="panel-footer">
+      <div class="btn-toolbar">
+          <input type="submit" value="Submit" class="btn btn-primary">
+          <!-- <input type="button" value="Load Name & Email" (click)="loadNameEmailData()" class="btn btn-primary">
+          <input type="button" value="Load Data" (click)="loadData()" class="btn btn-primary"> -->
+          <input type="reset" value="Reset" class="btn btn-primary">
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+</form>
+
+<table class="table table-bordered">
+  <thead>
+    <tr class="info">
+      <th>Control</th>
+      <th>Touched</th>
+      <th>Dirty</th>
+      <th>Valid</th>
+      <th>Invalid</th>
+      <th>Pristine</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First Name</td>
+      <td> {{ employeeForm.get('firstName').touched }} </td>
+      <td> {{ employeeForm.get('firstName').dirty }} </td>
+      <td> {{ employeeForm.get('firstName').valid }} </td>
+      <td> {{ employeeForm.get('firstName').invalid }} </td>
+      <td> {{ employeeForm.get('firstName').pristine }} </td>
+      <td> {{ employeeForm.get('firstName').value | json }} </td>
+    </tr>
+    <tr>
+      <td>Last Name</td>
+      <td> {{ employeeForm.get('lastName').touched }} </td>
+      <td> {{ employeeForm.get('lastName').dirty }} </td>
+      <td> {{ employeeForm.get('lastName').valid }} </td>
+      <td> {{ employeeForm.get('lastName').invalid }} </td>
+      <td> {{ employeeForm.get('lastName').pristine }} </td>
+      <td> {{ employeeForm.get('lastName').value | json }} </td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td> {{ employeeForm.get('email').touched }} </td>
+      <td> {{ employeeForm.get('email').dirty }} </td>
+      <td> {{ employeeForm.get('email').valid }} </td>
+      <td> {{ employeeForm.get('email').invalid }} </td>
+      <td> {{ employeeForm.get('email').pristine }} </td>
+      <td> {{ employeeForm.get('email').value | json }} </td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td> {{ employeeForm.get('gender').touched }} </td>
+      <td> {{ employeeForm.get('gender').dirty }} </td>
+      <td> {{ employeeForm.get('gender').valid }} </td>
+      <td> {{ employeeForm.get('gender').invalid }} </td>
+      <td> {{ employeeForm.get('gender').pristine }} </td>
+      <td> {{ employeeForm.get('gender').value | json }} </td>
+    </tr>
+    <tr>
+      <td>Mobile Number</td>
+      <td> {{ employeeForm.get('mobileNo').touched }} </td>
+      <td> {{ employeeForm.get('mobileNo').dirty }} </td>
+      <td> {{ employeeForm.get('mobileNo').valid }} </td>
+      <td> {{ employeeForm.get('mobileNo').invalid }} </td>
+      <td> {{ employeeForm.get('mobileNo').pristine }} </td>
+      <td> {{ employeeForm.get('mobileNo').value | json }} </td>
+    </tr>
+    <tr>
+      <td>Street Address</td>
+      <td> {{ employeeForm.get('address.streetAddress').touched }} </td>
+      <td> {{ employeeForm.get('address.streetAddress').dirty }} </td>
+      <td> {{ employeeForm.get('address.streetAddress').valid }} </td>
+      <td> {{ employeeForm.get('address.streetAddress').invalid }} </td>
+      <td> {{ employeeForm.get('address.streetAddress').pristine }} </td>
+      <td> {{ employeeForm.get('address.streetAddress').value | json }} </td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td> {{ employeeForm.get('address.city').touched }} </td>
+      <td> {{ employeeForm.get('address.city').dirty }} </td>
+      <td> {{ employeeForm.get('address.city').valid }} </td>
+      <td> {{ employeeForm.get('address.city').invalid }} </td>
+      <td> {{ employeeForm.get('address.city').pristine }} </td>
+      <td> {{ employeeForm.get('address.city').value | json }} </td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td> {{ employeeForm.get('address.state').touched }} </td>
+      <td> {{ employeeForm.get('address.state').dirty }} </td>
+      <td> {{ employeeForm.get('address.state').valid }} </td>
+      <td> {{ employeeForm.get('address.state').invalid }} </td>
+      <td> {{ employeeForm.get('address.state').pristine }} </td>
+      <td> {{ employeeForm.get('address.state').value | json }} </td>
+    </tr>
+    <tr>
+      <td>Zip Code</td>
+      <td> {{ employeeForm.get('address.zipcode').touched }} </td>
+      <td> {{ employeeForm.get('address.zipcode').dirty }} </td>
+      <td> {{ employeeForm.get('address.zipcode').valid }} </td>
+      <td> {{ employeeForm.get('address.zipcode').invalid }} </td>
+      <td> {{ employeeForm.get('address.zipcode').pristine }} </td>
+      <td> {{ employeeForm.get('address.zipcode').value | json }} </td>
+    </tr>
+    <tr>
+      <td>Skill Name</td>
+      <td> {{ employeeForm.get('skills.skillName').touched }} </td>
+      <td> {{ employeeForm.get('skills.skillName').dirty }} </td>
+      <td> {{ employeeForm.get('skills.skillName').valid }} </td>
+      <td> {{ employeeForm.get('skills.skillName').invalid }} </td>
+      <td> {{ employeeForm.get('skills.skillName').pristine }} </td>
+      <td> {{ employeeForm.get('skills.skillName').value | json }} </td>
+    </tr>
+    <tr>
+      <td>Experience</td>
+      <td> {{ employeeForm.get('skills.experienceInYears').touched }} </td>
+      <td> {{ employeeForm.get('skills.experienceInYears').dirty }} </td>
+      <td> {{ employeeForm.get('skills.experienceInYears').valid }} </td>
+      <td> {{ employeeForm.get('skills.experienceInYears').invalid }} </td>
+      <td> {{ employeeForm.get('skills.experienceInYears').pristine }} </td>
+      <td> {{ employeeForm.get('skills.experienceInYears').value | json }} </td>
+    </tr>
+    <tr>
+      <td>Proficiency</td>
+      <td> {{ employeeForm.get('skills.proficiency').touched }} </td>
+      <td> {{ employeeForm.get('skills.proficiency').dirty }} </td>
+      <td> {{ employeeForm.get('skills.proficiency').valid }} </td>
+      <td> {{ employeeForm.get('skills.proficiency').invalid }} </td>
+      <td> {{ employeeForm.get('skills.proficiency').pristine }} </td>
+      <td> {{ employeeForm.get('skills.proficiency').value | json }} </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-bordered">
+  <tr>
+    <th>FormGroup</th>
+  </tr>
+  <tr>
+    <td>
+      touched: {{employeeForm.touched}}
+      <br> dirty: {{employeeForm.dirty}}
+      <br> valid: {{employeeForm.valid}}
+      <br> Form Values: {{employeeForm.value | json}}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      touched: {{employeeForm.get('firstName').touched }}
+      <br> dirty: {{employeeForm.get('firstName').dirty}}
+      <br> valid: {{employeeForm.get('firstName').valid}}
+      <br> First Name Value: {{employeeForm.get('firstName').value | json}}
+    </td>
+  </tr>
+</table>
+
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+
+
+

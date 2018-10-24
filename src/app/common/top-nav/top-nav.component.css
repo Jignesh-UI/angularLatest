@@ -1,0 +1,15 @@
+.navbar-collapse{ padding: 0 0px;}
+.navbar{ margin: 0; min-height: auto;}
+.navbar-default{ background: transparent; border: 0; box-shadow: 0 0 0; }
+.navbar-brand, .navbar-nav>li>a{ text-shadow: 0 0 0; color: #fff; }
+.navbar.navbar-default .container-fluid{ padding: 0; }
+
+.nav.navbar-nav li.nav-item.active{ background: #333;}
+.nav.navbar-nav li.nav-item.active .nav-link{ color: #fff;}
+.nav.navbar-nav li.nav-item .nav-link:focus, 
+.nav.navbar-nav li.nav-item .nav-link:hover,
+.nav.navbar-nav li.nav-item .nav-link.active{background: #fff; border-radius: 0; color: #000000;}
+
+.nav>li>a{ padding:12px 10px;}
+.container-fluid>.navbar-collapse{ margin: 0;}
+.navbar-collapse .navbar-nav { margin: 0; }

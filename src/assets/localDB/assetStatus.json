@@ -1,0 +1,135 @@
+[
+	{
+		"assetStatusID": 1,
+		"assetsStatus": "A",
+		"assetStatusDescription": "Active",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 132,
+		"assetsStatus": "b",
+		"assetStatusDescription": "b",
+		"isAvailableForReservation": true,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 121,
+		"assetsStatus": "c",
+		"assetStatusDescription": "c",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 122,
+		"assetsStatus": "d",
+		"assetStatusDescription": "d",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 123,
+		"assetsStatus": "e",
+		"assetStatusDescription": "e",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 125,
+		"assetsStatus": "g",
+		"assetStatusDescription": "g",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 126,
+		"assetsStatus": "h",
+		"assetStatusDescription": "h",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 2,
+		"assetsStatus": "I",
+		"assetStatusDescription": "Inactive",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 127,
+		"assetsStatus": "j",
+		"assetStatusDescription": "jJJJ",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 3,
+		"assetsStatus": "M",
+		"assetStatusDescription": "Maintenance",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 128,
+		"assetsStatus": "n",
+		"assetStatusDescription": "nttest",
+		"isAvailableForReservation": true,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 119,
+		"assetsStatus": "O",
+		"assetStatusDescription": "Open s",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 85,
+		"assetsStatus": "R",
+		"assetStatusDescription": "Reopen",
+		"isAvailableForReservation": false,
+		"isObsolete": true
+	},
+	{
+		"assetStatusID": 118,
+		"assetsStatus": "S",
+		"assetStatusDescription": "S",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 120,
+		"assetsStatus": "T",
+		"assetStatusDescription": "T",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 129,
+		"assetsStatus": "U",
+		"assetStatusDescription": "U",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 130,
+		"assetsStatus": "v",
+		"assetStatusDescription": "v",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 131,
+		"assetsStatus": "w",
+		"assetStatusDescription": "ww",
+		"isAvailableForReservation": false,
+		"isObsolete": false
+	},
+	{
+		"assetStatusID": 136,
+		"assetsStatus": "X",
+		"assetStatusDescription": "xx",
+		"isAvailableForReservation": true,
+		"isObsolete": false
+	}
+]

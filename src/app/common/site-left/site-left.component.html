@@ -1,0 +1,50 @@
+<div class="leftNavigation">
+  <accordion [closeOthers]="oneAtATime">
+    <accordion-group #assetPanel [isOpen]="true">
+      <div accordion-heading>
+        <a routerLink="sAssetStatus" href="javascript:;">Assets</a>
+        <i class="pull-right float-xs-right glyphicon" [ngClass]="{'glyphicon-chevron-down': assetPanel?.isOpen, 'glyphicon-chevron-right': !assetPanel?.isOpen}"></i>
+      </div>
+      <ul>
+        <li><a routerLink="sAssetStatus" href="javascript:;">Asset Status</a></li>
+        <li><a routerLink="sRentalClass" href="javascript:;">Rental Class</a></li>
+        <li><a routerLink="sManageAssets" href="javascript:;">Manage Assets</a></li>
+        <li><a routerLink="sTransferAssets" href="javascript:;">Transfer Assets</a></li>
+        <li><a routerLink="sManageAssetAvailability" href="javascript:;">Manage Asset Availability</a></li>
+      </ul>
+    </accordion-group>
+    <accordion-group #locationPanel [isOpen]="isAssetPanelOpen">
+      <div accordion-heading>
+        <a routerLink="location" href="javascript:;">Location</a>
+        <i class="pull-right float-xs-right glyphicon" [ngClass]="{'glyphicon-chevron-down': locationPanel?.isOpen, 'glyphicon-chevron-right': !locationPanel?.isOpen}"></i>
+      </div>
+      <ul>
+        <li><a routerLink="location" href="javascript:;">Location</a></li>
+        <li><a routerLink="rentalHours" href="javascript:;">Rental Hours</a></li>
+        <li><a routerLink="rentalPrice" href="javascript:;">Rental Price</a></li>
+        <li><a routerLink="assetAPA" href="javascript:;">Asset Auto Priority Assignment</a></li>
+        <li><a routerLink="otherSettings" href="javascript:;">Other Settings</a></li>
+      </ul>
+    </accordion-group>
+
+    <accordion-group #globalFieldsPanel [isOpen]="isAssetPanelOpen">
+      <div accordion-heading>
+        <a routerLink="taxCharge"  href="javascript:;">Global Fields</a>
+        <i class="pull-right float-xs-right glyphicon" [ngClass]="{'glyphicon-chevron-down': globalFieldsPanel?.isOpen, 'glyphicon-chevron-right': !globalFieldsPanel?.isOpen}"></i>
+      </div>
+      <ul>
+        <li><a routerLink="taxCharge" href="javascript:;">Tax Charge</a></li>
+        <li><a routerLink="otherCharge" href="javascript:;">Other Charge</a></li>
+        <li><a routerLink="reason" href="javascript:;">Reason</a></li>
+        <li><a routerLink="license" href="javascript:;">License</a></li>
+      </ul>
+    </accordion-group>
+
+
+    <accordion-group [isDisabled]="true">
+      <div accordion-heading>
+        <a routerLink="globalSettings" href="javascript:;">Global Settings</a>
+      </div>
+    </accordion-group>
+  </accordion>
+</div>

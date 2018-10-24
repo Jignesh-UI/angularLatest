@@ -1,0 +1,417 @@
+<h1 class="pageTitle">
+  Angular 4 Interview Questions
+</h1>
+
+
+<accordion [closeOthers]="closeOthers">
+  <accordion-group heading="What is angular and why angular?" [isOpen]="isFirstOpen" >
+    <p>Angular (2/4/5) is not a programming language like Javascript or Typescript. Angular is a front-end or client-side Framework, which needs a programming language like Typescript (developed by Microsoft). Now, what does it mean when one says, "Angular is a client-side framework"? It means that it runs on the client-side or user's browser and not on a Web Server (where java/python/ruby/vb.net run). Of course, there is the Angular Universal which allows Angular to run on a server; but, primarily, angular is a client-side framework. Angular is a product developed and maintained by the techie giant Google and has adopted the SPA (Single Page Application) principles.</p>
+  </accordion-group>
+  <accordion-group heading="Name the building blocks of Angular.">
+    <p>The angular application is made using the following</p>
+    <ul>
+      <li>Modules</li>
+      <li>Component</li>
+      <li>Template</li>
+      <li>Directive</li>
+      <li>Data Binding</li>
+      <li>Services</li>
+      <li>Dependency Injection</li>
+      <li>Routing</li>
+    </ul>
+  </accordion-group>
+  <accordion-group heading="What is Transpiling in Angular?">
+    <p>Transpiling is the process of converting the typescript into javascript (using Traceur, a JS compiler). Though typescript is used to write code in the Angular applications, the code is internally transpiled into javascript.</p>
+  </accordion-group>
+  <accordion-group heading="Which of the Angular life cycle component execution happens when a data-bound input value updates?">
+    <p>ngOnChanges is the life cycle hook that gets executed whenever a change happens to the data that was bound to an input. </p>
+  </accordion-group>
+
+  <accordion-group heading="Differentiate between Components and Directives in Angular 5.">
+    <p>Components break up the application into smaller parts; whereas, Directives add behavior to an existing DOM element.</p>
+  </accordion-group>
+
+  <accordion-group heading="What is the use of @Input and @Output?">
+    <p>When it comes to the communication of Angular Components, which are in Parent-Child Relationship; we use @Input in Child Component when we are passing data from Parent to Child Component and @Output is used in Child Component to receive an event from Child to Parent Component.</p>
+  </accordion-group>
+
+<accordion-group heading="What is ng-content Directive?">
+  <p>The HTML elements like p (paragraph) or h1 (heading) have some content between the tags. For example, &lt;p&gt;this is a paragraph&lt;/p&gt; and lt;h1&gt;this is a heading&lt;/h1&gt;. Now, similar to this, what if we want to have some custom text or content between the angular tags like  &lt;app-tax&gt;some tax-related content&lt;/app-tax&gt; This will not work the way it worked for HTML elements.  Now, in such cases, the &lt;ng-content&gt; tag directive is used.</p>
+</accordion-group>
+
+<accordion-group heading="What does a router.navigate do?">
+  <p>When we want to route to a component we use router.navigate.  Syntax: this.router.navigate([‘/component_name’]);</p>
+</accordion-group>
+
+
+
+<accordion-group heading="What is ViewEncapsulation?">
+  <p>ViewEncapsulation decides whether the styles defined in a component can affect the entire application or not. There are three ways to do this in Angular: </p>
+  <ul>
+    <li> <strong>Emulated:</strong> styles from other HTML spread to the component.  </li>
+    <li> <strong>Native:</strong> styles from other HTML do not spread to the component.  </li>
+    <li> <strong>None:</strong> styles defined in a component are visible to all components.  </li>
+  </ul>
+</accordion-group>
+
+<accordion-group heading="What are Services in Angular and what command is used to create a service?">
+  <p>Services help us in not repeating the code. With the creation of services, we can use the same code from different components. Here is the command to create a service in angular, ng g service User (a UserService is created when this command is used).</p>
+</accordion-group>
+
+
+<accordion-group heading="What is Dependency Injection in Angular 4?">
+  <p>When a component is dependent on another component the dependency is injected/provided during runtime.</p>
+</accordion-group>
+
+<accordion-group heading="What is Routing in Angular ?">
+  <p>Routing helps a user in navigating to different pages using links.</p>
+</accordion-group>
+
+
+<accordion-group heading="How to handle Events in Angular ?">
+  <p>Any activity (button click, mouse click, mouse hover, mouse move, etc) of a user on a frontend/web screen is termed as an event. Such events are passed from the view (.HTML) page to a typescript component (.ts).</p>
+</accordion-group>
+
+<accordion-group heading="What is a RouterOutlet?">
+  <p>RouterOutlet is a substitution for templates rendering the components. In other words, it represents or renders the components on a template at a particular location.</p>
+</accordion-group>
+
+<accordion-group heading="Explain the usage of &#123;&#123;  &#125; &#125;">
+    <p>The set of brackets   &#123;&#123;  &#125; &#125;  when used with an HTML tag, represent data from a component. For example, on a HTML page which has &lt;h1&gt; &#123;&#123; 'variableName' &#125; &#125; &lt;/h1&gt;, here the ‘variableName’ is actually typescript (component) data representing its value on the template; i.e., HTML. This entire concept is called String Interpolati on.</ p>
+</accordion-group>
+
+
+<accordion-group heading="In how many ways the Data Binding can be done?">
+    <p>Data Binding happens between the HTML (template) and typescript (component). Data binding can be done in 3 ways:</p>
+    <ul>
+      <li>Property Binding</li>
+      <li>Event Binding</li>
+      <li>Two-way Data Binding</li>
+    </ul>
+</accordion-group>
+
+<accordion-group heading="What is the sequence of Angular Lifecycle Hooks?">
+    <ol>
+        <li>OnChange()</li>
+        <li>OnInit()</li>
+        <li>DoCheck()</li>
+        <li>AfterContentInit()</li>
+        <li>AfterContentChecked()</li>
+        <li>AfterViewInit()</li>
+        <li>AfterViewChecked()</li>
+        <li>OnDestroy()</li>
+      </ol>
+</accordion-group>
+
+<accordion-group heading="What is the purpose of using package.json in the angular project?">
+    <p>With the existence of package.json, it will be easy to manage the dependencies of the project. If we are using typescript in the angular project then we can mention the typescript package and version of typescript in package.json.</p>
+  </accordion-group>
+
+  <accordion-group heading="How is SPA (Single Page Application) technology different from the traditional web technology?">
+      <p>In traditional web technology, the client requests for a web page (HTML/JSP/asp) and the server sends the resource (or HTML page), and the client again requests for another page and the server responds with another resource. The problem here is a lot of time is consumed in the requesting/responding or due to a lot of reloading. Whereas, in the SPA technology, we maintain only one page (index.HTML) even though the URL keeps on changing.</p>
+
+  </accordion-group>
+
+
+<accordion-group heading="What is Component in Angular Terminology?">
+    <p>A web page in Angular has many components involved in it. A Component is basically a block in which the data can be displayed on HTML using some logic usually written in typescript.</p>
+  </accordion-group>
+
+  <accordion-group heading="What are ngModel and how do we represent it?">
+      <p>ngModel is a directive which can be applied on a text field. This a two-way data binding. ngModel is represented by [()]</p>
+  </accordion-group>
+
+  <accordion-group heading="What does a Subscribe method do in Angular 4?">
+      <p>It is a method which is subscribed to an observable. Whenever the subscribe method is called, an independent execution of the observable happens.</p>
+  </accordion-group>
+
+  <accordion-group heading="Validation in Angular 4?">
+<p> In Angular 4, following the four way of validation are commonly are used. </p>
+<ol>
+  <li> <strong>valid</strong> state of the validity of all form controls, true if all controls are valid </li>
+  <li> <strong>invalid</strong> inverse of valid; true if some control is invalid </li>
+  <li> <strong>pristine</strong> gives a status about the “cleanness” of the form; true if no control was modified </li>
+  <li> <strong>dirty</strong> inverse of pristine; true if some control was modified </li>
+</ol>
+  </accordion-group>
+
+
+
+  <accordion-group heading="Differentiate between Observables and Promises.">
+      <p>Observables are lazy, which means nothing happens until a subscription is made. Whereas Promises are eager; which means as soon as a promise is created, the execution takes place. Observable is a stream in which passing of zero or more events is possible and the callback is called for each event. Whereas, promise handles a single event.</p>
+  </accordion-group>
+
+
+  <accordion-group heading="What is an AsyncPipe in Angular?">
+    <p>When an observable or promise returns something, we use a temporary property to hold the content. Later, we bind the same content to the template. With the usage of AsyncPipe, the promise or observable can be directly used in a template and a temporary property is not required.</p>
+  </accordion-group>
+
+  <accordion-group heading="Explain Authentication and Authorization.">
+      <p><strong>Authentication:</strong> The user login credentials are passed to an authenticate API (on the server). On the server side validation of the credentials happens and a JSON Web Token (JWT) is returned. JWT is a JSON object that has some information or attributes about the current user.  Once the JWT is given to the client, the client or the user will be identified with that JWT.</p>
+      <p><strong>Authorization:</strong> After logging in successfully, the authenticated or genuine user does not have access to everything. The user is not authorized to access someone else’s data,  he/she is authorized to access some data.</p>
+  </accordion-group>
+
+
+<accordion-group heading="What is AOT Compilation?">
+    <p>Every angular application gets compiled internally. The angular compiler takes javascript code, compiles it and produces javascript code again. Ahead-of-Time Compilation does not happen every time or for every user, as is the case with Just-In-Time (JIT) Compilation.</p>
+  </accordion-group>
+
+  <accordion-group heading="What is Redux?">
+      <p>It is a library which helps us maintain the state of the application. Redux is not required in applications that are simple with the simple data flow, it is used in Single Page Applications that have complex data flow.</p>
+
+  </accordion-group>
+
+
+<accordion-group heading="What are Pipes?">
+    <p>This feature is used to change the output on the template; something like changing the string into uppercase and displaying it on the template. It can also change Date format accordingly.</p>
+  </accordion-group>
+
+
+
+<accordion-group heading="Differentiate between ng-Class and ng-Style.">
+    <p>In ng-Class, loading of CSS class is possible; whereas, in ng-Style we can set the CSS style.</p>
+  </accordion-group>
+
+  <accordion-group heading="Why Typescript with Angular?">
+      <p>Typescript is a superset of Javascript. Earlier, Javascript was the only client side language supported by all browsers. But, the problem with Javascript is, it is not a pure Object Oriented Programming Language. The code written in JS without following patterns like Prototype Pattern, becomes messy and finally leading to difficulties in maintainability and reusability. Instead of learning concepts (like patterns) to maintain code, programmers prefer to maintain the code in a OOP approach and is made avilable with a programming language like Typescript was thus developed by Microsoft in a way that it can work as Javascript and also offer what javascript cannot ie;</p>
+
+      <ul>
+        <li>pure OOPS as Typescript offers concepts like Generics, Interfaces and Types (a Static Typed Language) which makes it is easier to catch incorrect data types passing to variables.</li>
+        <li>TS provides flexibility to programmers experienced in java, .net as it offers encapsulation through classes and interfaces.</li>
+        <li>JS version ES5 offers features like Constructor Function, Dynamic Types, Prototypes. The next version of Javascript ie ES6 introduced new feature like Class keyword but not supported by many browsers.</li>
+        <li>TS offers Arrow Functions (=>) which is an ES6 feature not supported by many browsers directly but when used in TS, gets compiled into JS ES5 and runs in any browser.</li>
+        <li>TS is not the only alternative to JS, we have CoffeScript, Dart(Google).</li>
+        <li>Finally, it is like, TS makes life easier when compared to JS.</li>
+      </ul>
+  </accordion-group>
+
+  <accordion-group heading="What is TypeScript?">
+      <p>In Simple word Typescript is a Superset of JavaScript meaning any JavaScript code is valid typescript code.
+          Typescript is Trans piled to JavaScript behind the scene in the IDE.</p>
+        <p>Typescript follows the ECMAScript 2015 standard which contains features like:</p>
+        <ul>
+          <li>Generic</li>
+          <li>Namespace</li>
+          <li>Enumerated type</li>
+          <li>Interfaces etc...</li>
+        </ul>
+  </accordion-group>
+
+
+
+<accordion-group heading="What are the new features of Angular 4 over Angular 2?">
+    <p>The new View Engine (for AOT) in Angular 4 which reduces the generated code from components up to 60%.</p>
+    <p>Now in Angular 4 we can use the "if-else" conditional syntax instead of just using "if" like in Angular 2.</p>
+    <p>Angular 4 requires a minimum of Typescript 2.1 or higher.</p>
+    <p>Animations is removed from @angular/core so as to reduce the size of our code bundle.</p>
+    <p>But we can add animations by importing &#123; BrowserAnimationsModule &#125; from @angular/platform-browser/animations our NgModule.</p>
+    <p>Renderer is replaced by Renderer 2 in '@angular/core'.</p>
+    <p>In Angular 4 there no need of adding pattern for validation we can just define type="email" in our HTML Input which is an Html Dom property and angular will take care of it.</p>
+
+  </accordion-group>
+
+  <accordion-group heading="What are Components in Angular 2/4?">
+    <p>Angular is based on Components, as Components are the logical piece of code, which consists of Classes, Template and Metadata.
+        To say more simplistically Components are used to bind model and template while also providing the logical part.</p>
+  </accordion-group>
+
+  <accordion-group heading="What are modules in Angular 2/4?">
+    <p> Modules are used for organizing components, models, templates and other parts instead of coding everything into a single application.
+        This results in a more modular application, which is separated into different modules depending on their functionality and need of our app.</p>
+    </accordion-group>
+
+    <accordion-group heading="What is @inputs In Angular 2?">
+        <p>@Input decorator allows us to pass data into our application controller and templates through html as well as defining custom properties.
+            The @Input decorator binds a property with our child component so that it can communicate and pass values from parent to child.</p>
+    </accordion-group>
+
+    <accordion-group heading="What is @outputs In Angular 2?">
+        <p>@Output along with EventEmitter is used to push out events in components.
+            The @Output decorator binds a property with our child component so that our child component can call its parent component. We can say it is used for communication between parent and child component.</p>
+    </accordion-group>
+
+    <accordion-group heading="What is npm and why do we need it?">
+        <p>Npm stands for Node package manager. It is an online repository and works as a package manager for JavaScript.
+            A package.json file in our application defines the dependencies that we want to download for our application.</p>
+    </accordion-group>
+
+    <accordion-group heading="What is Routing and how does it work in Angular 2/4? How is it done?">
+      <p>The routing mechanism allows us to navigate between different views(via components) and allowing us to configure it to make it more flexible while providing us with features like lazy loading to ease load times and increase performance.</p>
+      <strong>Routing used for the following : -</strong>
+        <ul>
+          <li>It is used to create a modular application</li>
+          <li>To implement role based authorization in our application providing access to certain users to certain parts of the application.</li>
+          <li>It is used for State management in the application</li>
+        </ul>
+
+        <strong>Steps:</strong>
+
+        <ul>
+        <li>Create a module to store routing paths and define different paths and routes in it.</li>
+        <li>Import the routing module to your app.module.ts and add routing module name to the imports of @NgModule.</li>
+        <li>Add routing selector tags to your appcomponent's html.</li>
+        <li>Adding router links for navigation and</li>
+        <li>&lt;base href="/" &gt; to our index.html</li>
+      </ul>
+    </accordion-group>
+
+    <accordion-group heading="What is AOT Compilation? Explain its advantages and disadvantages?">
+        <p>AOT stands for Ahead of Time, There is no different compiler used in AOT just the sequence of process is changed.
+            Instead of compiling at runtime in the browser like JIT compilation.
+            The components and templates are compiled at built time and converted to native JavaScript and html.
+            So the browser does not have compile the application so it can directly render it and save time and system resources.</p>
+
+          <p> <strong>Advantages:</strong> AOT provides build time error detection so many compile type errors are detected before it running the application.
+            Faster download times as the application is compiled and bundled at build time, which eliminates the need of loading the angular compiler and its libraries leading to a lesser runtime.
+            Faster Rendering time as the application is already compiled and only needs to be rendered on the browser.</p>
+
+          <p> <strong>Disadvantages:</strong>  Angular version lower than 4 produces large JavaScript bundles after compilation, which defeats the purpose of AOT.
+            It only works only with HTML and CSS, other file types need to be built previously.
+            It needs a clean-up step before compiling.</p>
+  </accordion-group>
+
+  <accordion-group heading="What is lazy loading?">
+      <p>Lazy loading modules speeds up our applications startup time.
+          Lazy loading creates multiple bundles and loads them on demand in runtime.
+          If we had loaded all our components and templates into one big bundle, it would lead to a large performance penalty.</p>
+    </accordion-group>
+
+    <accordion-group heading=" What is ECMA Script?">
+        <p> To say as simple as possible ECMAScript is a subset of JavaScript.
+            ECMAScript is at the core of JavaScript and JavaScript just builds up on it.
+            ActionScript, JavaScript, Jscript and all other languages have ECMAScript at its core.</p>
+    </accordion-group>
+
+    <accordion-group heading="What are pipes in Angular 2/4?">
+      <p>Pipes are used in Angular 2/4 to edit/transform and format our data in the template itself.
+          Angular has built-in pipes for dates, currency, percentage and character cases.
+          In Addition to this we can create custom pipes ourselves and use them in angular.
+          Therefore, we can say that pipes take in data as input and transforms it to output we desire.</p>
+    </accordion-group>
+
+    <accordion-group heading="What is Change detection?">
+        <p>Change detection basically is the process of detecting the changes in the internal state of our application which might be caused due to Events, XHR and Timers and make it visible in the user interface.
+            Change detection work on the principle of zone.js in Angular 2/4.</p>
+    </accordion-group>
+
+    <accordion-group heading="What are Directives in Angular 2/4?">
+      <p>Directives in Angular are used to add behavior to our existing DOM elements.
+          We use @Directive meta-data annotation to register directives.
+          Directives in angular are used to design reusable components.
+          Directives do not have their own views.</p>
+    </accordion-group>
+
+    <accordion-group heading="What Are Event Emitters in Angular 2/4?">
+      <p>If the change in one of the child components needs to be reflected to any of its parent component, we can emit the event by using Event Emitter API in Angular.
+          EventEmitter is class present in @angular/core module, which is used by components and directives to emit custom events.</p>
+    </accordion-group>
+
+    <accordion-group heading="What is dependency injection in angular 2/4?">
+      <p>In Angular 2/4, dependency injection gives us the ability to add functionality of a component at runtime.
+          It also provides us a way to create a service that is a reusable piece of code, which can be used across our application to perform a particular function.</p>
+    </accordion-group>
+
+    <accordion-group heading="What are typings in Angular 2/4?">
+      <p>Typings is a way of installing the Typescript definitions using typings.json file, as it is necessary as the browser does not understand typescript natively and hence it must be transpiled first before rendering.</p>
+
+    </accordion-group>
+
+    <accordion-group heading="What are module loaders in Angular 2/4?">
+      <p>Module loaders in Angular are used to bundle different modules that contain their dependencies along with angular components into one bundle or multiple bundles (For lazy loading) and load them in the browser.</p>
+
+  </accordion-group>
+
+
+<accordion-group heading="What is the use of systemjs? How is webpack better to use in Angular 2/4?">
+  <p>Systemjs is a client side module bundler in angular as it loads modules (components and other files) on demand instead of loading an entire application at startup.
+      This largely reduces load times while starting up the app.
+      The up side of Webpack over Systemjs is that it bundles and creates a single file called bundle.js, which contains HTML, CSS and JS etc.
+      While the initial load time might take a few seconds once the app is cached it becomes lightning fast and will lead to a large boost in performance.</p>
+  </accordion-group>
+
+  <accordion-group heading="What are services in Angular 2/4?">
+
+    <p>In Angular 2/4 services are reusable function which include their properties used to perform some common functionality which can be used by different components instead of writing the same code again and again for different components a data service can be used by multiple components (via dependency injection).</p>
+
+    </accordion-group>
+
+<accordion-group heading="How to enable lazy loading in Angular 2/4?">
+  <p>Steps to enable lazy loading in Angular 2/4 are as follows:
+      Add loadChildren in place of components in the routes in the exported class in the Main Routing module of your application.
+      Now change forRoot to forChild in the module or feature level router config module and you are done.</p>
+  </accordion-group>
+
+
+
+  <accordion-group heading="Is it good to use JQuery in Angular 2/4?">
+    <p>Angular 2/4 and JQuery at its core are very different concept all together.
+        JQuery deals with manipulating DOM directly while Angular is used primarily for binding data.
+        In some scenarios, using JQuery libraries can be used as quick solutions but doing this we might face problems in the future in terms of pre-rendering.
+        </p>
+    </accordion-group>
+
+    <accordion-group heading="How can you use JQuery in Angular 2/4?">
+      <p>Steps to add and use jQuery in Angular 2/4 are as follows:
+          In your node.js terminal type npm install --save jQuery and hit enter.
+          Then install jQuery Declaration files by typing npm install -D @types/jquery and hitting enter.
+          Next Import into your component and then provide a typed reference for jQuery.</p>
+    </accordion-group>
+
+
+
+  <accordion-group heading="What is viewchild?">
+      <p>@ViewChild decorator is used when a parent component needs to communicate with and pass data to the child component.
+          We need to pass the class name of the child component to @Viewchild decorator function.</p>
+    </accordion-group>
+
+    <accordion-group heading="How to share global data across components?">
+        <p>In Angular 2/4, services are used to communicate data between different components.
+            As one component could pass, the data to the service while another component could read from it.
+            Therefore, this data service could pass the data from one components to multiple components.</p>
+    </accordion-group>
+
+    <accordion-group heading="ng new testApp --skip-install" [isOpen]="isFirstOpen" >
+      <p>Install new Angular Application but it will not install any angular packages.</p>
+      <h2>Refer to Angular CLI Website </h2>
+      <ul>
+        <li><a href="https://cli.angular.io/">cli.angular.io</a></li>
+        <li><a href="https://angular.io/">angular.io</a></li>
+        <li><a href="https://github.com/angular/angular-cli">github.com/angular/angular-cli</a></li>
+      </ul>
+    </accordion-group>
+
+    <accordion-group heading="ng new testApp ">
+      <p> Generate New Angular application inside "testApp" Folder. </p>
+    </accordion-group>
+
+    <accordion-group heading="ng new testApp --dry-run ">
+        <p> With this command Angular didnt write the files but it reports the list of files. </p>
+      </accordion-group>
+    <accordion-group heading=" ng new --help ">
+      <p> it generates the HELP of all the actions and their defaults and flag too. </p>
+    </accordion-group>
+
+
+  <accordion-group heading="ng new testApp --prefix jign">
+    <p> Angular CLI will generate application with Prifix "jign" instead of default "app". </p>
+  </accordion-group>
+  <accordion-group heading="ng new testApp --skip-tests  ">
+      <p> it will not generate the ".spec. files any more. </p>
+    </accordion-group>
+    <accordion-group heading="ng new testApp --style scss ">
+        <p> it will generate angular cli project with default css in SASS version. </p>
+      </accordion-group>
+      <accordion-group heading=" ng new testApp --routing">
+          <p> Generate Angular cli project with Routing Module </p>
+        </accordion-group>
+        <accordion-group heading="ng new testApp --skip-git ">
+            <p> Generate Angular CLI project and it didnt add the GIT project. </p>
+          </accordion-group>
+<accordion-group heading="ng serve -o ">
+  <p> Angular Build Project and run the project in default browser.  </p>
+</accordion-group>
+
+
+
+
+</accordion>
